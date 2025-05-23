@@ -1,0 +1,627 @@
+/* Lumo Entertainment Custom Styles */
+
+/* Color Palette Variables */
+:root {
+    --russian-violet: #10002b;
+    --russian-violet-2: #240046;
+    --persian-indigo: #3c096c;
+    --tekhelet: #5a189a;
+    --french-violet: #7b2cbf;
+    --amethyst: #9d4edd;
+    --heliotrope: #c77dff;
+    --mauve: #e0aaff;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+}
+
+/* Font Overrides */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    color: var(--russian-violet-2);
+}
+
+body, p, li, label, input, textarea, select {
+    font-family: "Funnel Display", sans-serif;
+    font-weight: 400;
+}
+
+/* Header Customisation */
+#header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, var(--russian-violet) 0%, var(--persian-indigo) 100%);
+}
+
+/* Header Background Images */
+.header-bg-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bg-image {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* logo styling */
+#logo {
+    position: relative;
+    z-index: 2;
+}
+
+#logo h1 a {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#logo p {
+    color: var(--mauve);
+    font-size: 1.2em;
+}
+
+/* Navigation Override */
+#nav > ul {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#nav > ul > li > a {
+    color: var(--white);
+    font-family: "Funnel Display", sans-serif;
+    font-weight: 500;
+}
+
+#nav > ul > li > a:hover,
+#nav > ul > li.active > a {
+    color: var(--mauve);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: var(--russian-violet-2);
+}
+
+/* About Section */
+#about {
+    background: #f8f9fa !important; /* Light gray background for contrast */
+    padding: 4em 0;
+}
+
+/* Override wrapper styles from main.css */
+#about.wrapper.style1 {
+    background: #f8f9fa !important;
+    color: var(--russian-violet-2) !important;
+}
+
+#about .section-title {
+    color: var(--russian-violet-2) !important;
+}
+
+#about p,
+#about .about-text {
+    color: #4a4a4a !important; /* Dark gray for readability */
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Top Entertainment Section */
+#top-entertainment {
+    background: var(--light-gray);
+    padding: 4em 0;
+}
+
+.events-grid {
+    display: flex; /* Changed from grid to flex */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center cards in the row */
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.event-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    flex-grow: 1; /* Allow cards to grow if space is available */
+    flex-shrink: 1; /* Allow cards to shrink if needed */
+    flex-basis: 280px; /* Base width for cards, making them narrower */
+    max-width: 340px; /* Maximum width for cards */
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px; /* Adjusted height slightly */
+    object-fit: cover;
+}
+
+.event-card h3 {
+    padding: 1em 1em 0.5em;
+    color: var(--tekhelet);
+}
+
+.event-card p {
+    padding: 0 1em 1em;
+    font-size: 1em; /* Slightly reduced font size for narrower cards */
+    line-height: 1.6;
+}
+
+.event-card .button {
+    margin: 0 1em 1.5em;
+}
+
+/* Categories Section */
+#categories {
+    background: var(--white);
+    padding: 4em 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns for computer screens */
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.category-card {
+    background: linear-gradient(135deg, var(--heliotrope) 0%, var(--amethyst) 100%);
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-icon {
+    font-size: 3em;
+    color: var(--white);
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.category-card h3 {
+    color: var(--white);
+    margin-bottom: 0.5em;
+}
+
+.category-card p {
+    color: var(--white);
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.category-card .button {
+    background: var(--white);
+    color: var(--tekhelet);
+}
+
+.category-card .button:hover {
+    background: var(--mauve);
+    color: var(--white);
+}
+
+/* Testimonials Section */
+#testimonials {
+    background: var(--light-gray);
+    padding: 4em 0;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial-card img {
+    width: 300px;
+    height: 100%; 
+    object-fit: cover;
+}
+
+.testimonial-content {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--tekhelet);
+    margin-bottom: 1.5em;
+}
+
+/* Button Customization */
+.button.style1 {
+    background: linear-gradient(135deg, var(--french-violet) 0%, var(--tekhelet) 100%);
+    color: var(--white);
+    border: none;
+    font-family: "Funnel Display", sans-serif;
+    font-weight: 500;
+}
+
+.button.style1:hover {
+    background: linear-gradient(135deg, var(--tekhelet) 0%, var(--persian-indigo) 100%);
+}
+
+.button.style2 {
+    background: var(--white);
+    color: var(--tekhelet);
+    border: 2px solid var(--tekhelet);
+}
+
+.button.style2:hover {
+    background: var(--tekhelet);
+    color: var(--white);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    overflow-y: auto; /* Allow scrolling on the modal backdrop */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 2% auto; /* Reduced top margin */
+    padding: 2em;
+    border: none;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh; /* Maximum height of 90% viewport height */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content from spilling out */
+}
+
+/* Modal header - fixed at top */
+.modal-content > h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Make the form scrollable */
+#booking-form {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 1em; /* Space for scrollbar */
+    margin-right: -1em; /* Compensate for padding */
+}
+
+/* Ensure close button stays visible */
+.close-modal {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    color: var(--russian-violet-2);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close-modal:hover {
+    color: var(--tekhelet);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: var(--russian-violet-2);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: "Funnel Display", sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--tekhelet);
+}
+
+.phone-input {
+    display: flex;
+    gap: 0.5em;
+}
+
+#country-code {
+    width: 80px;
+    background: var(--light-gray);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 0.25em;
+    display: none;
+}
+
+.form-group.error input,
+.form-group.error select {
+    border-color: #e74c3c;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+/* Success Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 2em;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-icon {
+    font-size: 4em;
+    color: #27ae60;
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.popup-content h3 {
+    color: var(--russian-violet-2);
+    margin-bottom: 0.5em;
+}
+
+.popup-content p {
+    margin-bottom: 1.5em;
+}
+
+/* Footer Override */
+#footer {
+    background: linear-gradient(135deg, var(--russian-violet) 0%, var(--russian-violet-2) 100%) !important;
+    padding: 3em 0;
+    color: var(--white) !important;
+}
+
+#footer .container {
+    text-align: center;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+    gap: 2em;
+}
+
+.footer-section h3 {
+    color: var(--mauve) !important;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--white) !important;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--heliotrope) !important;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white) !important;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+#footer #copyright ul {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2em;
+}
+
+#footer #copyright,
+#footer #copyright a {
+    color: var(--mauve) !important;
+}
+
+/* Scrollbar styling for the form */
+#booking-form::-webkit-scrollbar {
+    width: 8px;
+}
+
+#booking-form::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#booking-form::-webkit-scrollbar-thumb {
+    background: var(--heliotrope);
+    border-radius: 4px;
+}
+
+#booking-form::-webkit-scrollbar-thumb:hover {
+    background: var(--amethyst);
+}
+
+/* Styles for screens up to 980px wide */
+@media screen and (max-width: 980px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for categories */
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+    }
+
+    .testimonial-card img {
+        width: 100%;
+        height: 200px; /* Maintain a fixed height for consistency */
+    }
+}
+
+/* Styles for screens up to 736px wide (Mobile) */
+@media screen and (max-width: 736px) {
+    /* Modal adjustments for smaller screens */
+    .modal-content {
+        margin: 1% auto;
+        width: 95%;
+        max-height: 95vh;
+        padding: 1.5em;
+    }
+
+    #booking-form {
+        padding-right: 0.5em; /* Adjust padding for scrollbar */
+        margin-right: -0.5em; /* Compensate for padding */
+    }
+
+    /* Event cards will stack to 1 column due to flex-wrap and their basis/max-width */
+    .event-card {
+        flex-basis: 100%; /* Ensure they take full width when stacking */
+        max-width: 400px; /* Optional: set a max-width for single column view if desired, centered by justify-content on parent */
+        margin-left: auto; /* Center if max-width is applied and less than container */
+        margin-right: auto; /* Center if max-width is applied and less than container */
+
+    }
+    .categories-grid {
+        grid-template-columns: 1fr; /* 1 column for categories */
+    }
+
+    .header-bg-images {
+        flex-direction: column; /* Stack background images vertically */
+    }
+
+    .bg-image {
+        width: 100%;
+        height: 33.33%; /* Each image takes a third of the header height */
+    }
+
+    #header {
+        height: 70vh; /* Adjust header height for mobile */
+    }
+
+    .testimonial-card img {
+        height: 200px; /* Maintain height for testimonial images */
+    }
+}
