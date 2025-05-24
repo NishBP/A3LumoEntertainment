@@ -137,9 +137,9 @@ body, p, li, label, input, textarea, select {
 }
 
 .events-grid {
-    display: flex; /* Changed from grid to flex */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center; /* Center cards in the row */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
     gap: 2em;
     margin-top: 3em;
 }
@@ -163,7 +163,7 @@ body, p, li, label, input, textarea, select {
 
 .event-card img {
     width: 100%;
-    height: 200px; /* Adjusted height slightly */
+    height: 200px; 
     object-fit: cover;
 }
 
@@ -174,7 +174,7 @@ body, p, li, label, input, textarea, select {
 
 .event-card p {
     padding: 0 1em 1em;
-    font-size: 1em; /* Slightly reduced font size for narrower cards */
+    font-size: 1em; 
     line-height: 1.6;
 }
 
@@ -322,12 +322,12 @@ body, p, li, label, input, textarea, select {
 
 .modal-content {
     background-color: var(--white);
-    margin: 2% auto; /* Reduced top margin */
+    margin: 2% auto;
     padding: 2em;
     border: none;
     width: 90%;
     max-width: 600px;
-    max-height: 90vh; /* Maximum height of 90% viewport height */
+    max-height: 90vh; 
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
@@ -349,7 +349,7 @@ body, p, li, label, input, textarea, select {
     overflow-y: auto;
     flex: 1;
     padding-right: 1em; /* Space for scrollbar */
-    margin-right: -1em; /* Compensate for padding */
+    margin-right: -1em; 
 }
 
 /* Ensure close button stays visible */
@@ -513,7 +513,7 @@ body, p, li, label, input, textarea, select {
 
 /* Arrow indicator for the question button */
 .faq-question::after {
-    content: '\25BC'; /* Current problematic line */
+    content: '\25BC'; 
     font-size: 0.9em;
     color: var(--tekhelet);
     position: absolute;
@@ -527,20 +527,16 @@ body, p, li, label, input, textarea, select {
 .faq-question.active::after {
     transform: translateY(-50%) rotate(180deg); /* Up arrow */
 }
-/* Optional: Style the active question button differently if desired */
-/* .faq-question.active {
-    background-color: #e5d9f2;
-} */
 
 .faq-answer {
-    padding: 0 1em; /* Horizontal padding for the answer container */
-    display: none;  /* Initially hidden - main change here */
-    overflow: hidden; /* Good practice, though less critical with display:none */
-    background-color: var(--white); /* Or a slightly different background if you prefer */
+    padding: 0 1em; 
+    display: none;  
+    overflow: hidden;
+    background-color: var(--white); 
 }
 
 .faq-answer p {
-    padding: 1.25em 0.5em; /* Vertical and some horizontal padding for the text content */
+    padding: 1.25em 0.5em;
     margin: 0;
     color: #4a4a4a;
     font-size: 1.05em;
@@ -669,16 +665,15 @@ body, p, li, label, input, textarea, select {
     }
 
     #booking-form {
-        padding-right: 0.5em; /* Adjust padding for scrollbar */
-        margin-right: -0.5em; /* Compensate for padding */
+        padding-right: 0.5em; 
+        margin-right: -0.5em; 
     }
 
-    /* Event cards will stack to 1 column due to flex-wrap and their basis/max-width */
     .event-card {
-        flex-basis: 100%; /* Ensure they take full width when stacking */
-        max-width: 400px; /* Optional: set a max-width for single column view if desired, centered by justify-content on parent */
-        margin-left: auto; /* Center if max-width is applied and less than container */
-        margin-right: auto; /* Center if max-width is applied and less than container */
+        flex-basis: 100%;
+        max-width: 400px; 
+        margin-left: auto; 
+        margin-right: auto; 
 
     }
     .categories-grid {
@@ -695,10 +690,10 @@ body, p, li, label, input, textarea, select {
     }
 
     #header {
-        height: 70vh; /* Adjust header height for mobile */
+        height: 70vh;
     }
 
     .testimonial-card img {
-        height: 200px; /* Maintain height for testimonial images */
+        height: 200px;
     }
 }

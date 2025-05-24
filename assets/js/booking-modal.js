@@ -34,7 +34,7 @@
     // Function to close the modal
     function closeBookingModal() {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflow = 'auto'; // re enable scrolling
         resetForm();
     }
 
@@ -66,7 +66,7 @@
             isValid = false;
         }
 
-        // Validate phone (Australian format - must start with 04)
+        // Validate phone (Australian format()
         const phone = document.getElementById('phone');
         const phoneRegex = /^04[0-9]{8}$/; // Must start with 04 and have 10 digits total
         if (!phoneRegex.test(phone.value.replace(/\s/g, ''))) {
@@ -133,7 +133,7 @@
         }
     });
 
-    // Prevent non-numeric key presses
+    // Prevent non numeric key presses
     phoneInput.addEventListener('keypress', function(e) {
         // Allow backspace, delete, tab, escape, enter
         if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
@@ -150,7 +150,7 @@
         }
     });
 
-    // Disable HTML5 validation to use our custom validation
+    // Disable HTML5 validation to use custom validation
     bookingForm.setAttribute('novalidate', 'novalidate');
 
     // Show error message for a field
@@ -167,7 +167,7 @@
         document.body.style.overflow = 'hidden';
     }
 
-    // Close success popup (I'll make this global so the onclick can access it)
+    // Close success popup 
     window.closeSuccessPopup = function() {
         successPopup.style.display = 'none';
         document.body.style.overflow = 'auto';
